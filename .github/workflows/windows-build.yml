@@ -22,3 +22,9 @@ jobs:
       - name: Build Windows .exe
         run: |
           pyinstaller --onefile --windowed --name ApproxAI ApproxAI.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ApproxAI-exe
+          path: dist/ApproxAI.exe
